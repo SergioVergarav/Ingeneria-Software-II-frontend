@@ -5,7 +5,7 @@ import {solicitudes} from "../componentes/solicitudes";
 @Injectable({
   providedIn: 'root'
 })
-export class EquipoService {
+export class SolicitudService {
   private httpClient = inject(HttpClient)
 
     httpOptions = { headers: new HttpHeaders({'Content-Type' : 'application/json'})};
