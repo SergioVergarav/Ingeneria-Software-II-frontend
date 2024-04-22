@@ -7,6 +7,7 @@ import {Formulario} from "../../componentes1/formulario";
 })
 export class Formularioservice {
 
+
   urlRest  = 'http://localhost:8862/api/formulario/';
 
   private httpClient = inject(HttpClient)

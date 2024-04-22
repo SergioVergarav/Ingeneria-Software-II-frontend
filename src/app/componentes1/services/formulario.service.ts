@@ -16,6 +16,7 @@ export class FormularioService {
     return this.httpClient.get<Formulario[]>(this.rutaformularios);
   }
 
+
   guardar(formulario?: Formulario){
     return this.httpClient.post<any>(this.rutaformularios, formulario);
   }

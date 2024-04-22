@@ -4,6 +4,7 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {FormularioService} from "../services/formularios.service";
 import {Formulario} from "../../componentes1/formulario";
 
+
 @Component({
   selector: 'app-formulariosform',
   standalone: true,

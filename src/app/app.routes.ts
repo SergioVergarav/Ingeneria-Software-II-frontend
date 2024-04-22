@@ -6,3 +6,4 @@ export const routes: Routes = [
     loadComponent: () => import('./componentes1/formulariosform/formulariosform.Component')
   }
 ];
+
