@@ -1,13 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 import {SolicitudService} from "../../servicios/solicitud.service";
 import {RouterModule} from "@angular/router";
-import { CommonModule } from '@angular/common';
 import {Solicitud} from "../solicitud";
 
 @Component({
   selector: 'app-solicitudes',
   standalone: true,
-  imports: [ CommonModule,RouterModule],
+  imports: [ RouterModule],
   templateUrl: './solicitudes.component.html',
   styleUrls: ['./solicitudes.component.css']
 })
