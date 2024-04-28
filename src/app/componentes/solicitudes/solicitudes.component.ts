@@ -1,28 +1,28 @@
-import { Component } from '@angular/core';
-import {solicitudService} from "../../servicios/solicitud.service";
+import { Component, OnInit, inject } from '@angular/core';
+import {SolicitudService} from "../../servicios/solicitud.service";
 import {RouterModule} from "@angular/router";
-import {solicitudes} from "../solicitudes";
+import { CommonModule } from '@angular/common';
+import {Solicitud} from "../solicitud";
 
 @Component({
   selector: 'app-solicitudes',
   standalone: true,
-  imports: [],
+  imports: [ CommonModule,RouterModule],
   templateUrl: './solicitudes.component.html',
-  styleUrl: './solicitudes.component.css'
+  styleUrls: ['./solicitudes.component.css']
 })
 export class SolicitudesComponent implements OnInit {
 
   isActivo = false;
-  private solicitudService = inject(solicitudService)
+  private solicitudService = inject(SolicitudService)
 
-  solicitudes: Solicitudes[] = [];
-
+  Solicitudes: Solicitud[] = [];
   ngOnInit(): void {
       this.consultarSolicitudes();
     }
     consultarSolicitudes(){
-      this.equipoServicio.listar().subscribe((solicitudes) => {
-        this.solicitudes = solicitudes;
+      this.solicitudService.listar().subscribe((Solicitudes) => {
+        this.Solicitudes = Solicitudes;
       });
     }
 

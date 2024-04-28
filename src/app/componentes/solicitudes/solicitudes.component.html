@@ -1,32 +1,28 @@
 <h5 class="mb-5">Solicitudes</h5>
 
-  <table class="table table-hovet">
-    <thead>
-    <tr>
-      <th scope="col">Número de Solicitud</th>
-      <th scope="col">Nombres</th>
-      <th scope="col">Apellidos</th>
-      <th scope="col">Documento</th>
-      <th scope="col">Correo</th>
-      <th scope="col">Fecha</th>
-    </tr>
-    </thead>
-    <tbody>
-    @for(dato of solicitudes; track dato.numerodesolicitud) {
-    <tr>
-      <td style="min-width:100px">{{dato.numerodesolicitud}}</td>
-      <td style="min-width:200px">{{dato.nombres}}</td>
-      <td style="min-width:100px">{{dato.apellidos}}</td>
-      <td style="min-width:100px">{{dato.documento}}</td>
-      <td style="min-width:100px">{{dato.correo}}</td>
-      <td style="min-width:100px">{{dato.fecha}}</td>
-      <td class="text-end">
-        <div class="btn-group">
-          <button class="btn btn-primary" [routerLink]= "[dato.serial,'editar']" >Abrir</button>
-        </div>
-      </td>
-    </tr>
+<table class="table table-hovet">
+  <thead>
+  <tr>
+    <th scope="col">Número de solicitud</th>
+    <th scope="col">Nombres</th>
+    <th scope="col">Apellidos</th>
+    <th scope="col">Documento</th>
+    <th scope="col">Correo</th>
+    <th scope="col">Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for(dato of Solicitudes; track dato.numerodesolicitud) {
+      <tr>
+        <td style="min-width:100px">{{dato.numerodesolicitud}}</td>
+        <td style="min-width:200px">{{dato.nombre}}</td>
+        <td style="min-width:100px">{{dato.apellido}}</td>
+        <td style="min-width:100px">{{dato.documento}}</td>
+        <td style="min-width:100px">{{dato.correo}}</td>
+        <td class="text-end">
+        </td>
+      </tr>
     }
-    </tbody>
+  </tbody>
 
-  </table>
+</table>
