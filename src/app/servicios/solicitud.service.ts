@@ -7,7 +7,7 @@ import {Solicitud} from "../componentes/solicitud";
 })
 export class SolicitudService {
 
-  urlRest  = 'http://localhost:4864/api/solicitudes/';
+  urlRest  = 'http://localhost:8744/api/solicitudes/all';
 
   private httpClient = inject(HttpClient)
 
@@ -15,5 +15,8 @@ export class SolicitudService {
 
     public listar() {
       return this.httpClient.get<Solicitud[]>(this.urlRest+'', this.httpOptions);
+    }
+    public detalle(id:number){
+      return this.httpClient.get<Solicitud>(this.urlRest+ `${id}`, this.httpOptions);
     }
   }

@@ -1,9 +1,12 @@
 export interface Solicitud {
 
-  numerodesolicitud : number;
+  numerosolicitud : number;
   nombre : string;
   apellido : string;
-  documento : string;
+  cedula : number;
   correo : string;
+  celular: number;
+  salario: number;
+  gastos: number;
 
 }

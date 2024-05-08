@@ -10,19 +10,20 @@ import {Solicitud} from "../solicitud";
   templateUrl: './solicitudes.component.html',
   styleUrls: ['./solicitudes.component.css']
 })
-export class SolicitudesComponent implements OnInit {
+export default class SolicitudesComponent implements OnInit {
 
   isActivo = false;
   private solicitudService = inject(SolicitudService)
 
   Solicitudes: Solicitud[] = [];
+
   ngOnInit(): void {
-      this.consultarSolicitudes();
-    }
-    consultarSolicitudes(){
-      this.solicitudService.listar().subscribe((Solicitudes) => {
-        this.Solicitudes = Solicitudes;
-      });
-    }
+    this.consultarSolicitudes();
+  }
+  consultarSolicitudes(){
+    this.solicitudService.listar().subscribe((Solicitudes) => {
+      this.Solicitudes = Solicitudes;
+    });
+  }
 
 }

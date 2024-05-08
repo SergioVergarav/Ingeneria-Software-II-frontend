@@ -1,6 +1,7 @@
-<h5 class="mb-5">Solicitudes</h5>
+<div class="container">
+<h5 class="mb-5">Solicitudes Banco UC</h5>
 
-<table class="table table-hovet">
+<table class="table table-striped">
   <thead>
   <tr>
     <th scope="col">Número de solicitud</th>
@@ -12,17 +13,21 @@
   </tr>
   </thead>
   <tbody>
-    @for(dato of Solicitudes; track dato.numerodesolicitud) {
+    @for(dato of Solicitudes; track dato.numerosolicitud) {
       <tr>
-        <td style="min-width:100px">{{dato.numerodesolicitud}}</td>
+        <td style="min-width:100px">{{dato.numerosolicitud}}</td>
         <td style="min-width:200px">{{dato.nombre}}</td>
         <td style="min-width:100px">{{dato.apellido}}</td>
-        <td style="min-width:100px">{{dato.documento}}</td>
+        <td style="min-width:100px">{{dato.cedula}}</td>
         <td style="min-width:100px">{{dato.correo}}</td>
-        <td class="text-end">
+        <td class="text-center">
+          <div class="btn-group">
+            <button class="btn btn-primary" [routerLink]= "[dato.numerosolicitud,'Abrir']" >Abrir</button>
+          </div>
         </td>
       </tr>
     }
   </tbody>
 
 </table>
+</div>
