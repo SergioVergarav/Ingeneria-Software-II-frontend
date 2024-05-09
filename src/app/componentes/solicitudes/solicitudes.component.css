@@ -1,5 +1,5 @@
 .container{
-  background-color: #c8c2c2;
+  background-color: #abbc38;
   border-radius: 10px;
   padding: 20px;
 }
@@ -10,20 +10,29 @@ h5 {
   font-family: cursive;
 }
 
-.custom-table th,
-.container.custom-table td {
-  padding: 10px;
-  text-align: left;
-  font-family: cursive !important;
+.table-striped th{
+  text-align: center;
+  text-transform: uppercase;
+
+}
+.table-striped td {
+  padding: 8px;
+  text-align: center;
+  font-family: cursive ;
 }
 
-.btn-group {
+.btn-success {
   font-size: 0.875rem;
   font-family: cursive;
-  color: #fff;
-  background-color: #0b51e8;
+  text-transform: uppercase;
+  color: black;
+  background-color: transparent;
   border-color: #050505;
   border-radius: 0.65rem;
+}
+.btn-success:hover {
+  background-color: #0b51e8;
+  color: white;
 }
 
 

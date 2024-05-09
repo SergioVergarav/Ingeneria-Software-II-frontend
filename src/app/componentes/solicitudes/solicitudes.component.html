@@ -9,7 +9,7 @@
     <th scope="col">Apellidos</th>
     <th scope="col">Documento</th>
     <th scope="col">Correo</th>
-    <th scope="col">Acciones</th>
+    <th scope="col">Detalle</th>
   </tr>
   </thead>
   <tbody>
@@ -21,9 +21,7 @@
         <td style="min-width:100px">{{dato.cedula}}</td>
         <td style="min-width:100px">{{dato.correo}}</td>
         <td class="text-center">
-          <div class="btn-group">
-            <button class="btn btn-primary" [routerLink]= "[dato.numerosolicitud,'Abrir']" >Abrir</button>
-          </div>
+            <button type="button" class="btn btn-success" >Abrir</button>
         </td>
       </tr>
     }
