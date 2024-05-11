@@ -11,7 +11,7 @@ describe('TarjetasComponent', () => {
       imports: [TarjetasComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(TarjetasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -20,4 +20,5 @@ describe('TarjetasComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
