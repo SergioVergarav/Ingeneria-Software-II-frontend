@@ -15,31 +15,30 @@ import {response} from "express";
 })
 export class SolicitudesformComponent implements OnInit{
   form: FormGroup ;
-private fb = inject(FormBuilder);
+  private fb = inject(FormBuilder);
 
-private solicitudService = inject(SolicitudService);
-resultado = '';
-constructor() {
-  this.form = this.fb.group({
-    nombre: ['', [Validators.required]],
-    apellido: ['',[Validators.required]],
-    celular: ['',[Validators.required]],
-    correo: ['',[Validators.required]],
-    documento: ['',[Validators.required]],
-    salario: ['',[Validators.required]],
-    gastos: ['',[Validators.required]]
+  private solicitudService = inject(SolicitudService);
+  resultado = '';
+  constructor() {
+    this.form = this.fb.group({
+      nombre: ['', [Validators.required]],
+      apellido: ['',[Validators.required]],
+      celular: ['',[Validators.required]],
+      correo: ['',[Validators.required]],
+      cedula: ['',[Validators.required]],
+      salario: ['',[Validators.required]],
+      gastos: ['',[Validators.required]]
+    });
+  }
+  ngOnInit(): void {
 
-  });
-}
-ngOnInit(): void {
-
-}
-guardar(){
-  console.log(this.form)
-  const solicitud = this.form!.value;
-  this.solicitudService.guardar(solicitud).subscribe( (dato) =>{
-    console.log('Guardo');
-    this.resultado = 'Almaceno'
-  });
-}
+  }
+  guardar(){
+    console.log(this.form)
+    const solicitud = this.form!.value;
+    this.solicitudService.guardar(solicitud).subscribe( (dato) =>{
+      console.log('Guardo');
+      this.resultado = 'Almaceno'
+    });
+  }
 }
