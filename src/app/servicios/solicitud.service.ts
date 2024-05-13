@@ -7,13 +7,23 @@ import {Solicitud} from "../componentes/solicitud";
 })
 export class SolicitudService {
 
-  urlRest  = 'http://localhost:8744/api/solicitudes/all';
+  urlRest  = 'http://localhost:8744/api/solicitudes/';
 
   private httpClient = inject(HttpClient)
 
   httpOptions = { headers: new HttpHeaders({'Content-Type' : 'application/json'})};
 
-  public guardar(solicitud: Solicitud) {
+  guardar(solicitud?: Solicitud){
+    return this.httpClient.post<any>(this.urlRest, solicitud);
+  }
+
+  public crear(solicitud: Solicitud) {
     return this.httpClient.post<Solicitud>(this.urlRest,solicitud, this.httpOptions);
   }
+
+  public modificar(solicitud: any) {
+    console.log(solicitud)
+    return this.httpClient.put<Solicitud>(this.urlRest,solicitud, this.httpOptions);
+  }
+
 }

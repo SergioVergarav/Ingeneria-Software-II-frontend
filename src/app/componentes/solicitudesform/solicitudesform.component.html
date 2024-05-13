@@ -1,0 +1,43 @@
+<form  [formGroup]="form" (ngSubmit)="guardar()">
+  <div class="form-group">
+    <label class="control-label" for="idnombre">Nombre: </label>
+    <input id="idnombre" type="text" class="form-control"  required autofocus="autofocus"
+           formControlName="nombre">
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="idapellido">Apellido: </label>
+    <input id="idapellido" type="text" class="form-control"  required autofocus="autofocus"
+           formControlName="apellido">
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="idcelular">Celular: </label>
+    <input id="idcelular" type="text" class="form-control"  required autofocus="autofocus"
+           formControlName="celular">
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="iddocumen">Documento: </label>
+    <input id="iddocumen" type="text" class="form-control"  required autofocus="autofocus"
+           formControlName="documento">
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="idsalario">Salario: </label>
+    <input id="idsalario" type="text" class="form-control"  required autofocus="autofocus"
+           formControlName="salario">
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="idgastos">Gastos: </label>
+    <input id="idgastos" type="text" class="form-control"  required autofocus="autofocus"
+           formControlName="gasto">
+  </div>
+
+  <br>
+  <div class="form-group text-end">
+    <button type="button" class="btn btn-light" routerLink="/">Cancelar</button>
+    <button type="submit" class="btn btn-primary ms-2" [disabled]="!form.valid">
+      Guardar
+    </button>
+
+
+  </div>
+</form>
+<p >{{resultado}}</p>
