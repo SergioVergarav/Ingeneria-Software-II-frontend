@@ -4,5 +4,9 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./componentes/solicitudes/solicitudes.component')
+  },
+  {
+    path: 'tarjetas',
+    loadComponent: () =>import('./componentes/tarjetasform/tarjetasform.component')
   }
 ];
