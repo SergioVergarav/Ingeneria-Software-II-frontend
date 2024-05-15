@@ -25,4 +25,5 @@ export class SolicitudService {
   public obtener(id: number){
     return this.httpClient.get<Solicitud>(this.urlRest+'${id}',this.httpOptions);
   }
+
 }
