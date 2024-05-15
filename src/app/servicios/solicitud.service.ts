@@ -13,8 +13,10 @@ export class SolicitudService {
 
   httpOptions = { headers: new HttpHeaders({'Content-Type' : 'application/json'})};
 
-  guardar(solicitud?: Solicitud){
-    return this.httpClient.post<any>(this.urlRest, solicitud);
+  public crear(solicitud: Solicitud){
+    return this.httpClient.post<Solicitud>(this.urlRest+'registro',solicitud,this.httpOptions);
   }
-
+  public obtener(id: number){
+    return this.httpClient.get<Solicitud>(this.urlRest+'${id}',this.httpOptions);
+  }
 }
