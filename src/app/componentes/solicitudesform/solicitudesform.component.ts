@@ -13,7 +13,7 @@ import {response} from "express";
   templateUrl: './solicitudesform.component.html',
   styleUrl: './solicitudesform.component.css'
 })
-export class SolicitudesformComponent implements OnInit{
+export default class SolicitudesformComponent implements OnInit{
   form?: FormGroup ;
   private fb = inject(FormBuilder);
   private solicitudService = inject(SolicitudService);
