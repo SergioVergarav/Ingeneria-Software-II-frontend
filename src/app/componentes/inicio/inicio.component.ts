@@ -11,6 +11,7 @@ export default class InicioComponent  implements OnInit {
 
   public active : boolean = false
 
+
   constructor() { }
   ngOnInit(): void {}
 
