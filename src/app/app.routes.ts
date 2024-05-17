@@ -7,6 +7,6 @@ export const routes: Routes = [
   },
   {
     path: 'tarjetas',
-    loadComponent: () =>import('./componentes/tarjetasform/tarjetasform.component')
+    loadComponent: () =>import('./componentes/tarjetas/tarjetas.component')
   }
 ];

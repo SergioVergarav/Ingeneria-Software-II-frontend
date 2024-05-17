@@ -16,7 +16,4 @@ export class SolicitudService {
     public listar() {
       return this.httpClient.get<Solicitud[]>(this.urlRest+'', this.httpOptions);
     }
-    public detalle(id:number){
-      return this.httpClient.get<Solicitud>(this.urlRest+ `${id}`, this.httpOptions);
-    }
   }

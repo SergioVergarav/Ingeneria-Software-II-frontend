@@ -1,6 +1,7 @@
 import { inject,Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Tarjeta} from "../componentes/tarjeta";
+import {Solicitud} from "../componentes/solicitud";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class TarjetaService {
 
     httpOptions = {headers: new HttpHeaders({'Content-Type':'Application/json'})};
 
-  public lista(id: number) {
-    return this.httpClient.get<Tarjeta>(this.urlRest+`${id}`, this.httpOptions);
+  public listar() {
+    return this.httpClient.get<Tarjeta[]>(this.urlRest+'', this.httpOptions);
   }
 }

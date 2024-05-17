@@ -12,7 +12,6 @@ import {Solicitud} from "../solicitud";
 })
 export default class SolicitudesComponent implements OnInit {
 
-  isActivo = false;
   private solicitudService = inject(SolicitudService)
 
   Solicitudes: Solicitud[] = [];
