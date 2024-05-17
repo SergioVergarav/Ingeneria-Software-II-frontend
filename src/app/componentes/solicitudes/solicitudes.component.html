@@ -1,0 +1,32 @@
+<div class="container">
+
+<h5 class="mb-5">Solicitudes Banco UC</h5>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Número de solicitud</th>
+    <th scope="col">Nombres</th>
+    <th scope="col">Apellidos</th>
+    <th scope="col">Documento</th>
+    <th scope="col">Correo</th>
+    <th scope="col">Detalle</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for(dato of Solicitudes; track dato.numerosolicitud) {
+      <tr>
+        <td style="min-width:100px">{{dato.numerosolicitud}}</td>
+        <td style="min-width:200px">{{dato.nombre}}</td>
+        <td style="min-width:100px">{{dato.apellido}}</td>
+        <td style="min-width:100px">{{dato.cedula}}</td>
+        <td style="min-width:100px">{{dato.correo}}</td>
+        <td class="text-center">
+            <button type="button" class="btn btn-success" >Abrir</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+
+</table>
+</div>
