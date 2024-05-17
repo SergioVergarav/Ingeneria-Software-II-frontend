@@ -1,0 +1,34 @@
+.container{
+  background-color: #abbc38;
+  border-radius: 10px;
+  padding: 20px;
+}
+h5 {
+  text-align: center;
+  font-size: 34px;
+  font-family: cursive;
+
+}
+.table-striped th{
+  text-align: center;
+  text-transform: uppercase;
+
+}
+.table-striped td {
+  padding: 8px;
+  text-align: center;
+  font-family: cursive ;
+}
+.btn-success {
+  font-size: 0.875rem;
+  font-family: cursive;
+  text-transform: uppercase;
+  color: black;
+  background-color: transparent;
+  border-color: #050505;
+  border-radius: 0.65rem;
+}
+.btn-success:hover {
+  background-color: #e80b0b;
+  color: white;
+}
