@@ -1,0 +1,33 @@
+.container {
+  background-color: #09869c;
+  width: 100%; /* Cambia el valor según tus preferencias */
+  height: 620px;
+  border-radius: 20px;
+  padding: 10px; /* Ajusta el valor según tus preferencias */
+}
+h1 {
+  background-color: #0e2133;
+  border-radius: 20px;
+  padding: 10px;
+  width: 200%; /* Cambia el valor según tus preferencias */
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff; /* Agrega un color de texto */
+}
+.form-group{
+  background-color: #92f5f8;
+  border-radius: 20px;
+  padding: 100px;
+  width: 200%; /* Cambia el valor según tus preferencias */
+  height: 480px;
+}
+.btn {
+  margin-right: 154px;
+  transition: background-color 0.8s ease; /* Agrega una transición suave */
+}
+.btn:hover {
+  color: #131313;
+  background-color: #fdfdfd; /* Cambia el color al pasar el mouse */
+}
+
