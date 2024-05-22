@@ -39,7 +39,7 @@
             <input id="celular"  type="number" class="form-control" required autofocus="autofocus"
                    formControlName="celular">
             @if(form.get('celular')?.hasError('required') && form.get('celular')?.touched){
-              <p class="invalid-feedback d-block">El celular es obligatorio</p>
+              <p class="invalid-feedback d-block">El celular es obligatorio y de diez dígitos</p>
             }
           </div>
           <div class="form-group">
@@ -55,7 +55,7 @@
             <input id="cedula"  type="number" class="form-control" required autofocus="autofocus"
                    formControlName="cedula">
             @if(form.get('cedula')?.hasError('required') && form.get('cedula')?.touched){
-              <p class="invalid-feedback d-block">La cedula es obligatorio</p>
+              <p class="invalid-feedback d-block">La cedula es obligatorio y de máximo diez dígitos</p>
             }
           </div>
           <div class="form-group">

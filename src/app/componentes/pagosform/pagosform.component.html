@@ -22,7 +22,7 @@
             <input id="numerotar"  type="text" class="form-control" required autofocus="autofocus"
                    formControlName="numerotarj">
             @if(form.get('numerotar')?.hasError('required') && form.get('numerotar')?.touched){
-              <p class="invalid-feedback d-block">El número de la tarjeta es obligatorio</p>
+              <p class="invalid-feedback d-block">El número de la tarjeta es obligatorio y debe contener 16 dígitos</p>
             }
           </div>
           <div class="form-group">
