@@ -54,9 +54,9 @@ export default class SolicitudesformComponent implements OnInit{
           numerosolicitud: [solicitud.numerosolicitud],
           nombre: [solicitud.nombre, [Validators.required]],
           apellido: [solicitud.apellido, [Validators.required]],
-          celular: [solicitud.celular, [Validators.required]],
+          celular: [solicitud.celular, [Validators.required, Validators.min(10), Validators.max(10)]],
           correo: [solicitud.correo, [Validators.required]],
-          cedula: [solicitud.cedula, [Validators.required]],
+          cedula: [solicitud.cedula, [Validators.required, Validators.max(10)]],
           salario: [solicitud.salario, [Validators.required]],
           gastos: [solicitud.gastos, [Validators.required]]
         });
@@ -65,9 +65,9 @@ export default class SolicitudesformComponent implements OnInit{
       this.form = this.fb.group({
         nombre: ['', [Validators.required]],
         apellido: ['',[Validators.required]],
-        celular: ['',[Validators.required]],
+        celular: ['',[Validators.required, Validators.min(10), Validators.max(10)]],
         correo: ['',[Validators.required]],
-        cedula: ['',[Validators.required]],
+        cedula: ['',[Validators.required, Validators.max(10)]],
         salario: ['',[Validators.required]],
         gastos: ['',[Validators.required]]
       });
