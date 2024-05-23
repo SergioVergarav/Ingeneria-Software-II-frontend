@@ -1,5 +1,5 @@
 .container {
-  background-color: #09869c;
+  background-color: #073c45;
   width: 100%; /* Cambia el valor según tus preferencias */
   height: 620px;
   border-radius: 20px;
@@ -16,14 +16,14 @@ h1 {
   color: #fff; /* Agrega un color de texto */
 }
 .form-group{
-  background-color: #92f5f8;
+  background-color: #bbfbfd;
   border-radius: 20px;
   padding: 100px;
   width: 200%; /* Cambia el valor según tus preferencias */
   height: 480px;
 }
 .btn {
-  margin-right: 154px;
+  margin-right: 250px;
   transition: background-color 0.8s ease; /* Agrega una transición suave */
 }
 .btn:hover {
