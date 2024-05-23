@@ -1,6 +1,6 @@
 import { Component, inject, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterLink, RouterModule} from "@angular/router";
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, FormControl, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {PagosService} from "../../servicios/pagos.service";
 import {Pagos} from "../pagos";
 import {Observable} from "rxjs";
@@ -45,19 +45,20 @@ export default class PagosformComponent implements OnInit{
     });
   }
 
+
   ngOnInit(): void {
     const serial = this.route.snapshot.paramMap.get('serial');
     if (serial){
       this.pagoService.obtener(parseInt(serial)).subscribe(pago=>{
         this.pago = pago;
         this.form = this.fb.group({
-          numerotar: [pago.numerotar,[Validators.required, Validators.min(16), Validators.max(16)]],
+          numerotar: [pago.numerotar,[Validators.required, Validators.pattern(/^\d{16}$/)]],
           monto: [pago.monto, [Validators.required]]
         });
       });
     }else{
       this.form = this.fb.group({
-        numerotar: ['',[Validators.required, Validators.min(16), Validators.max(16)]],
+        numerotar: ['',[Validators.required, Validators.pattern(/^\d{16}$/)]],
         monto: ['',[Validators.required]]
       });
     }
