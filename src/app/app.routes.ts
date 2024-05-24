@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'solicitudes',
     loadComponent: () => import('./componentes/solicitudes/solicitudes.component')
   },
   {
@@ -16,5 +16,9 @@ export const routes: Routes = [
   {
     path: 'pagos',
     loadComponent: () => import('./componentes/pagosform/pagosform.component')
+},
+{
+    path: '',
+    loadComponent: () => import('./componentes/inicio/inicio.component')
   }
 ];
