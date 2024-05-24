@@ -10,7 +10,7 @@ describe('TarjetasComponent', () => {
     await TestBed.configureTestingModule({
       imports: [TarjetasComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(TarjetasComponent);
     component = fixture.componentInstance;

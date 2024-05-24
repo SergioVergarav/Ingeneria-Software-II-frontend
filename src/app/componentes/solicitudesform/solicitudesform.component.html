@@ -41,6 +41,9 @@
             @if(form.get('celular')?.hasError('required') && form.get('celular')?.touched){
               <p class="invalid-feedback d-block">El celular es obligatorio</p>
             }
+            @if(form.get('celular')?.hasError('minlength') && form.get('celular')?.touched || form.get('celular')?.hasError('maxlength') && form.get('celular')?.touched){
+              <p class="invalid-feedback d-block">El número de celular debe tener 10 dígitos</p>
+            }
           </div>
           <div class="form-group">
             <label class="control-label" for="correo">Correo:</label>
@@ -56,6 +59,9 @@
                    formControlName="cedula">
             @if(form.get('cedula')?.hasError('required') && form.get('cedula')?.touched){
               <p class="invalid-feedback d-block">La cedula es obligatorio</p>
+            }
+            @if (form.get('cedula')?.hasError('maxlength')){
+              <p class="invalid-feedback d-block">La cedula debe de tener 10 dígitos</p>
             }
           </div>
           <div class="form-group">
