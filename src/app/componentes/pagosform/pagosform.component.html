@@ -20,7 +20,7 @@
           <div class="form-group">
             <label class="control-label" for="numerotar">Número de Tarjeta:</label>
             <input id="numerotar"  type="text" class="form-control" required autofocus="autofocus"
-                   formControlName="numerotarj">
+                   formControlName="numerotar">
             @if(form.get('numerotar')?.hasError('required') && form.get('numerotar')?.touched){
               <p class="invalid-feedback d-block">El número de la tarjeta es obligatorio</p>
             }

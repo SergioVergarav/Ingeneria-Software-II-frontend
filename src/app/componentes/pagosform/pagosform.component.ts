@@ -51,13 +51,13 @@ export default class PagosformComponent implements OnInit{
       this.pagoService.obtener(parseInt(serial)).subscribe(pago=>{
         this.pago = pago;
         this.form = this.fb.group({
-          numerotar: [pago.numerotar,[Validators.required, Validators.min(16), Validators.max(16)]],
+          numerotar: [pago.numerotar,[Validators.required, Validators.minLength(16), Validators.maxLength(16)]],
           monto: [pago.monto, [Validators.required]]
         });
       });
     }else{
       this.form = this.fb.group({
-        numerotar: ['',[Validators.required, Validators.min(16), Validators.max(16)]],
+        numerotar: ['',[Validators.required, Validators.minLength(16), Validators.maxLength(16)]],
         monto: ['',[Validators.required]]
       });
     }
