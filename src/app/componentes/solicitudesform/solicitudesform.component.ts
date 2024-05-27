@@ -76,7 +76,4 @@ export default class SolicitudesformComponent implements OnInit{
 
   }
 
-
-
-
 }

@@ -32,3 +32,8 @@ h5 {
   background-color: #e80b0b;
   color: white;
 }
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

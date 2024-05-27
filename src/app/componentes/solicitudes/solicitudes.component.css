@@ -22,7 +22,7 @@ h5 {
   font-family: cursive ;
 }
 
-.btn-success {
+.btn-info {
   font-size: 0.875rem;
   font-family: cursive;
   text-transform: uppercase;
@@ -31,9 +31,12 @@ h5 {
   border-color: #050505;
   border-radius: 0.65rem;
 }
-.btn-success:hover {
+.btn-info:hover {
   background-color: #0b51e8;
   color: white;
 }
-
-
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

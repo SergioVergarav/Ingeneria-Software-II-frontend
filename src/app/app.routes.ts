@@ -14,6 +14,10 @@ export const routes: Routes = [
     loadComponent: () => import('./componentes/solicitudesform/solicitudesform.component')
   },
   {
+    path: 'pagos',
+    loadComponent: () => import('./componentes/pagosform/pagosform.component')
+},
+{
     path: '',
     loadComponent: () => import('./componentes/inicio/inicio.component')
   }
