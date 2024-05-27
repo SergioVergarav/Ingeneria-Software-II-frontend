@@ -12,6 +12,7 @@
       <th scope="col">Fecha de Corte</th>
       <th scope="col">Fecha de Pago</th>
       <th scope="col">Saldo Pendiente</th>
+      <th scope="col"> Realizar Pago</th>
     </tr>
     </thead>
     <tbody>
@@ -24,8 +25,14 @@
           <td style="min-width:100px">{{dato.fecha_cor}}</td>
           <td style="min-width:100px">{{dato.fecha_lim}}</td>
           <td style="min-width:100px">{{dato.saldo}}</td>
+          <td class="text-center">
+            <button type="button" class="btn btn-success" routerLink="/pagos">Pagar</button>
+          </td>
         </tr>
       }
     </tbody>
   </table>
+  <div class="button-container">
+    <button type="button" class="btn btn-success" routerLink="/">Atrás</button>
+  </div>
 </div>

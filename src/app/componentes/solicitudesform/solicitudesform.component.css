@@ -1,7 +1,7 @@
 .row{
   background-color: #abbc38;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
 }
 
 h1 {
@@ -18,15 +18,26 @@ h1 {
   border-color: #050505;
   border-radius: 0.65rem;
 }
+.btn-success{
+  margin-right: 10px;
+  font-family: cursive;
+  text-transform: uppercase;
+  transition: background-color 1.0s ease;
+  border-radius: 0.65rem;
+}
 .btn-success:hover {
   background-color: #0b51e8;
   color: white;
 }
-.btn {
+.btn-light {
   margin-right: 10px;
-  transition: background-color 1.0s ease; /* Agrega una transición suave */
+  font-family: cursive;
+  text-transform: uppercase;
+  transition: background-color 1.0s ease;
+  border-radius: 0.65rem;
 }
-.btn:hover {
-  background-color: #292727; /* Cambia el color al pasar el mouse */
+.btn-light:hover {
+  background-color: #292727;
+  color: white;
 }
 
