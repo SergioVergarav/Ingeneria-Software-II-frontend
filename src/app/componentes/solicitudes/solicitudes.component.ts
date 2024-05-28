@@ -24,5 +24,7 @@ export default class SolicitudesComponent implements OnInit {
       this.Solicitudes = Solicitudes;
     });
   }
-
+  trackByNumerosolicitud(index: number, solicitud: Solicitud): number {
+    return solicitud.numerosolicitud;
+  }
 }

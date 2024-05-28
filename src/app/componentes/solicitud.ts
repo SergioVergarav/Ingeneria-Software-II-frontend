@@ -8,5 +8,7 @@ export interface Solicitud {
   celular: number;
   salario: number;
   gastos: number;
+  comentario: string;
+
 
 }

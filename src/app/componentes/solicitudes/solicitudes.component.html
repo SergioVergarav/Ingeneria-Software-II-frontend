@@ -15,14 +15,14 @@
   </thead>
   <tbody>
     @for(dato of Solicitudes; track dato.numerosolicitud) {
-      <tr>
+      <tr >
         <td style="min-width:100px">{{dato.numerosolicitud}}</td>
         <td style="min-width:200px">{{dato.nombre}}</td>
         <td style="min-width:100px">{{dato.apellido}}</td>
         <td style="min-width:100px">{{dato.cedula}}</td>
         <td style="min-width:100px">{{dato.correo}}</td>
         <td class="text-center">
-            <button type="button" class="btn btn-success" >Abrir</button>
+          <button type="button" class="btn btn-success" [routerLink]="['/aprobar', dato.numerosolicitud]">Abrir</button>
         </td>
       </tr>
     }
