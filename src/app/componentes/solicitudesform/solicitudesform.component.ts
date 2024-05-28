@@ -27,9 +27,9 @@ export default class SolicitudesformComponent implements OnInit {
       return;
     }
     let request: Observable<Solicitud>;
-    const equipo = this.form!.value;
+    const solicitud = this.form!.value;
 
-    request = this.solicitudService.crear(equipo);
+    request = this.solicitudService.crear(solicitud);
 
     request.subscribe({
       next: () => {
