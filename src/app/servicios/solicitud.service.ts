@@ -26,8 +26,9 @@ export class SolicitudService {
   public obtener(id: number){
     return this.httpClient.get<Solicitud>(this.urlRest+'${id}',this.httpOptions);
   }
-  modificar(solicitud: Solicitud): Observable<Solicitud> {
-    return this.httpClient.post<Solicitud>(this.urlRest+'update', solicitud, this.httpOptions);
+  modificar(solicitud: any): Observable<Solicitud> {
+    console.log(solicitud)
+    return this.httpClient.put<Solicitud>(this.urlRest+'editar',solicitud, this.httpOptions);
   }
 
 }
