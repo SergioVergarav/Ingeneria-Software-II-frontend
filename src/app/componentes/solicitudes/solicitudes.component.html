@@ -22,7 +22,7 @@
         <td style="min-width:100px">{{dato.cedula}}</td>
         <td style="min-width:100px">{{dato.correo}}</td>
         <td class="text-center">
-            <button type="button" class="btn btn-success" >Abrir</button>
+          <button type="button" class="btn btn-success" [routerLink]="[dato.numerosolicitud,'/aprobar']">Abrir</button>
         </td>
       </tr>
     }
