@@ -20,9 +20,5 @@ export const routes: Routes = [
 {
     path: '',
     loadComponent: () => import('./componentes/inicio/inicio.component')
-},
-  {
-    path: 'aprobar',
-    loadComponent: () => import('./componentes/aprobarform/aprobarform.component')
-  }
+}
 ];

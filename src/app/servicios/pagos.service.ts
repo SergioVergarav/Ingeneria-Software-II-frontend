@@ -7,7 +7,7 @@ import {Pagos} from "../componentes/pagos";
 })
 export class PagosService {
 
-  urlRest="http://localhost:8744/api/pagos/";
+  urlRest="http://localhost:8746/api/pagos/";
   private httpClient = inject(HttpClient)
 
   httpOptions = { headers: new HttpHeaders({'Content-Type' : 'application/json'})};
