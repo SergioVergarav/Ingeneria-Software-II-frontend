@@ -8,7 +8,7 @@ import {Solicitud} from "../componentes/solicitud";
 })
 export class TarjetaService {
 
-  urlRest = 'http://localhost:8744/api/tarjetas/todas';
+  urlRest = 'http://localhost:8746/api/tarjetas/todas';
 
   private httpClient = inject(HttpClient)
 

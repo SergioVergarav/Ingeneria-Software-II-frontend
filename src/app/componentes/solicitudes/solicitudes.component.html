@@ -10,19 +10,28 @@
     <th scope="col">Apellidos</th>
     <th scope="col">Documento</th>
     <th scope="col">Correo</th>
+    <th scope="col">Celular</th>
+    <th scope="col">Salario</th>
+    <th scope="col">Gastos</th>
     <th scope="col">Detalle</th>
   </tr>
   </thead>
   <tbody>
     @for(dato of Solicitudes; track dato.numerosolicitud) {
       <tr>
-        <td style="min-width:100px">{{dato.numerosolicitud}}</td>
-        <td style="min-width:200px">{{dato.nombre}}</td>
-        <td style="min-width:100px">{{dato.apellido}}</td>
-        <td style="min-width:100px">{{dato.cedula}}</td>
-        <td style="min-width:100px">{{dato.correo}}</td>
+        <td style="min-width:100px">{{ dato.numerosolicitud }}</td>
+        <td style="min-width:200px">{{ dato.nombre }}</td>
+        <td style="min-width:200px">{{ dato.apellido }}</td>
+        <td style="min-width:100px">{{ dato.cedula }}</td>
+        <td style="min-width:200px">{{ dato.correo }}</td>
+        <td style="min-width:100px">{{ dato.celular }}</td>
+        <td style="min-width:100px">{{ dato.salario }}</td>
+        <td style="min-width:100px">{{ dato.gastos }}</td>
         <td class="text-center">
-          <button type="button" class="btn btn-success" [routerLink]="[dato.numerosolicitud,'/aprobar']">Abrir</button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-success" (click)="abrirSolicitud(dato.numerosolicitud)">Aprobar</button>
+            <button type="button" class="btn btn-danger" (click)="eliminarSolicitud(dato.numerosolicitud)">Eliminar</button>
+          </div>
         </td>
       </tr>
     }
